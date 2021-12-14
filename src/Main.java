@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,6 +16,17 @@ public class Main {
             e) w klasie Main proszę stworzyć objekty podobnie jak w przykładzie 5,
             oraz stworzyć listę typu najbardziej generycznego np. List<Budynek>
          */
+        List<Osoba> lista = new ArrayList<>();
 
+        Osoba osoba = new Osoba("Michał", "Marek");
+        Student student = new Student("Grzegorz", "Grzegórzka", 632);
+        Wykladowca wykladowca = new Wykladowca("Krzysztof", "Jarzyna", "Imir");
+
+        lista.add(osoba);
+        lista.add(student);
+        lista.add(wykladowca);
+        System.out.println(lista);
+
+        lista.forEach((n) -> System.out.println(n.toString()));
     }
 }
